@@ -21,12 +21,13 @@ numbered example implementations that build on each other, a dedicated README ex
 why each step exists, and curated resources for going deeper.
 
 ```
-Unity_Design_Patterns/
-├── Creational_Design_Patterns/
-│   └── Singleton/
-├── Behavioral_Design_Patterns/
-│   └── Observer/
-└── Structural_Design_Patterns/
+Assets/
+└── Unity_Design_Patterns/
+    ├── Creational_Design_Patterns/
+    │   └── Singleton/
+    ├── Behavioral_Design_Patterns/
+    │   └── Observer/
+    └── Structural_Design_Patterns/
 ```
 
 ---
@@ -36,12 +37,12 @@ Unity_Design_Patterns/
 ### Creational
 | Pattern | Status | Description |
 |---------|--------|-------------|
-| [Singleton](Creational_Design_Patterns/Singleton) | ✅ Complete | 8 progressive implementations from Basic to ScriptableObject-backed |
+| [Singleton](Assets/Unity_Design_Patterns/Creational_Design_Patterns/Singleton) | ✅ Complete | 8 progressive implementations from Basic to ScriptableObject-backed |
 
 ### Behavioral
 | Pattern | Status | Description |
 |---------|--------|-------------|
-| [Observer](Behavioral_Design_Patterns/Observer) | ✅ Complete | 7 progressive implementations from NoPattern to EventBus |
+| [Observer](Assets/Unity_Design_Patterns/Behavioral_Design_Patterns/Observer) | ✅ Complete | 7 progressive implementations from NoPattern to EventBus |
 
 ---
 

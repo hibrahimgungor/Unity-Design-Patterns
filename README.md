@@ -1,32 +1,32 @@
 # Unity Design Patterns
 
-A growing collection of design pattern implementations written in C# for Unity.
-Each pattern is self-contained, progressively structured from the simplest possible
-version to a production-ready solution, and documented with real use cases in mind.
+A growing reference library of design pattern implementations written in C# for Unity.
 
-This repository is built to be a practical reference — not just a textbook exercise.
-Every implementation answers the question: *why would I actually use this in a Unity project?*
+Each pattern is built to answer a question I keep coming back to: *how does this actually
+work in a Unity project, and when should I use it?* Not just the textbook definition —
+the real implementation, the trade-offs, the Unity-specific gotchas, and the decision
+points that matter in practice.
+
+This repository exists because I forget things. When I haven't used a pattern for months,
+I need more than a Wikipedia summary to get back up to speed. Every entry here is written
+the way I'd want to find it: progressive implementations from the simplest version to a
+production-ready solution, documented with the reasoning behind each step.
 
 ---
 
 ## Structure
 
-Patterns are grouped by their classical GoF category. Each pattern folder is split into
-two parts: **Scripts** for core implementations and **Examples** for concrete usage scripts
-and scenes. This keeps base classes clean and separable from demonstration code.
+Patterns are grouped by their classical GoF category. Each pattern folder contains
+numbered example implementations that build on each other, a dedicated README explaining
+why each step exists, and curated resources for going deeper.
 
 ```
 Unity_Design_Patterns/
 ├── Creational_Design_Patterns/
 │   └── Singleton/
-│       ├── Scripts/        # Base classes only
-│       └── Examples/       # Example scripts and scenes
 ├── Behavioral_Design_Patterns/
-│   ├── Observer/
-│   ├── Strategy/
-│   └── Command/
+│   └── Observer/
 └── Structural_Design_Patterns/
-    └── Decorator/
 ```
 
 ---
@@ -36,7 +36,12 @@ Unity_Design_Patterns/
 ### Creational
 | Pattern | Status | Description |
 |---------|--------|-------------|
-| Singleton | ✅ Complete | 8 progressive implementations from Basic to ScriptableObject-backed |
+| [Singleton](Creational_Design_Patterns/Singleton) | ✅ Complete | 8 progressive implementations from Basic to ScriptableObject-backed |
+
+### Behavioral
+| Pattern | Status | Description |
+|---------|--------|-------------|
+| [Observer](Behavioral_Design_Patterns/Observer) | ✅ Complete | 7 progressive implementations from NoPattern to EventBus |
 
 ---
 
@@ -45,7 +50,6 @@ Unity_Design_Patterns/
 ### Behavioral
 | Pattern | Status |
 |---------|--------|
-| Observer | 🔜 Planned |
 | Strategy | 🔜 Planned |
 | Command | 🔜 Planned |
 
@@ -54,24 +58,17 @@ Unity_Design_Patterns/
 |---------|--------|
 | Decorator | 🔜 Planned |
 
-More patterns will be added over time. The list will grow as the project evolves.
-
 ---
 
-## How This Repo Is Organized
+## What Each Pattern Entry Contains
 
-Each pattern folder contains:
-- **Scripts/** — base class implementations, documented via XML summaries
-- **Examples/** — concrete subclasses, MonoBehaviour runners, and Unity scenes
-
-No inline comments. Everything that needs explanation lives in the `<summary>` block
-so it shows up in IDE tooltips and stays out of the way while reading code.
-
-Each pattern also has its own `README.md` that explains:
-- Why each implementation step exists
-- What problem it solves and what new problem it introduces
-- A feature matrix and a decision guide for picking the right variant
-- Curated external resources (videos and articles)
+- **Progressive implementations** — each step introduces one new concept, shows what problem
+  it solves, and what new problem it introduces
+- **XML summaries** — every class and method documented so explanations show up in IDE
+  tooltips without cluttering the code
+- **Pattern README** — trade-offs, decision guide, Unity-specific notes, and the reasoning
+  behind every implementation choice
+- **Curated resources** — videos and articles worth reading, not just a list of links
 
 ---
 
